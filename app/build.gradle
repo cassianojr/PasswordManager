@@ -75,4 +75,9 @@ dependencies {
 
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
+
+    //groupie recyclerView
+    implementation "com.xwray:groupie:2.8.1"
+    implementation "com.xwray:groupie-viewbinding:2.8.1"
+    implementation "com.xwray:groupie-kotlin-android-extensions:2.8.1"
 }
