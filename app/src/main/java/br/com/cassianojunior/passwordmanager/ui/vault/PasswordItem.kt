@@ -17,17 +17,17 @@ class PasswordItem(private val password:Password):BindableItem<ItemPasswordBindi
             viewBinding.textViewWebsite.text = password.website
             viewBinding.textViewUsername.text = password.username
         }
-        setClipboard(viewBinding)
+        handleClipboard(viewBinding)
     }
 
-    private fun setClipboard(viewBinding: ItemPasswordBinding) {
+    private fun handleClipboard(viewBinding: ItemPasswordBinding) {
         viewBinding.imageViewCopy.setOnClickListener { view ->
             val clipManager: ClipboardManager =
                 view.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText(password.website, password.password)
             clipManager.setPrimaryClip(clip)
 
-            Toast.makeText(view.context, "Copyed to Clipboard!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(view.context, "Copied to Clipboard!", Toast.LENGTH_SHORT).show()
         }
     }
 

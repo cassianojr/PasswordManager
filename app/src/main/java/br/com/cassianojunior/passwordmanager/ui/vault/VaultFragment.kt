@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.cassianojunior.passwordmanager.R
 import br.com.cassianojunior.passwordmanager.data.model.Password
@@ -28,9 +28,6 @@ class VaultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentVaultBinding.inflate(inflater, container, false)
-
-
-//        val root = inflater.inflate(R.layout.fragment_vault, container, false)
 
         return binding.root
     }
@@ -68,8 +65,15 @@ class VaultFragment : Fragment() {
         passwords.add(p8)
 
         initRecyclerView(passwords.toPasswordItems())
+
+        handleAddButtonClick()
     }
 
+    private fun handleAddButtonClick() {
+        binding.btnNewPassword.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_navigation_vault_to_createPasswordFragment)
+        }
+    }
 
     private fun List<Password>.toPasswordItems():List<PasswordItem>{
         return this.map{

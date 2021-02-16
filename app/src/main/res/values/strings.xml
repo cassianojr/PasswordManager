@@ -7,4 +7,12 @@
     <string name="copy_the_password">Copy the password</string>
     <string name="text_username">cassianojr</string>
     <string name="text_website">Google</string>
+    <string name="text_new_password">Add new password</string>
+    <string name="text_password_create_password">Password:</string>
+    <string name="text_btn_create_password">Create new Password</string>
+    <string name="text_username_label">Username:</string>
+    <string name="hint_username">your username</string>
+    <string name="hint_website">Google</string>
+    <string name="text_website_label">Website Name:</string>
+    <string name="text_create_password_headline">Create new Website Password</string>
 </resources>
