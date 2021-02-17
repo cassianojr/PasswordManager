@@ -19,7 +19,7 @@
         android:id="@+id/navigation_tools"
         android:name="br.com.cassianojunior.passwordmanager.ui.tools.ToolsFragment"
         android:label="@string/title_tools"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_tools" />
 
     <fragment
         android:id="@+id/navigation_settings"

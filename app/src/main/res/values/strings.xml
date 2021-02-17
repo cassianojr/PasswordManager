@@ -15,4 +15,15 @@
     <string name="hint_website">Google</string>
     <string name="text_website_label">Website Name:</string>
     <string name="text_create_password_headline">Create new Website Password</string>
+    <string name="text_title_gen_password">Generate Password</string>
+    <string name="txt_btn_generate_password">Generate password</string>
+    <string name="txt_include_symbols">Include Symbols</string>
+    <string name="txt_include_letters">Include Letters</string>
+    <string name="txt_include_numbers">Include Numbers</string>
+    <string name="txt_label_settings">Settings:</string>
+    <string name="txt_label_max_length">32</string>
+    <string name="txt_label_min_length">4</string>
+    <string name="txt_label_length">Length:</string>
+    <string name="txt_placeholder_generated_password">ABCDEFGHIJKLMNOPQRSTUVWXYZ1234</string>
+    <string name="txt_label_generated_password">Generated Password</string>
 </resources>
