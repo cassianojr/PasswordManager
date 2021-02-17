@@ -1,13 +1,25 @@
 package br.com.cassianojunior.passwordmanager.ui.vault
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import br.com.cassianojunior.passwordmanager.data.db.entity.PasswordEntity
+import br.com.cassianojunior.passwordmanager.data.model.Password
+import br.com.cassianojunior.passwordmanager.data.repository.PasswordManagerRepository
+import br.com.cassianojunior.passwordmanager.internal.lazyDeferred
+import kotlinx.coroutines.launch
 
-class VaultViewModel : ViewModel() {
+class VaultViewModel(
+        private val passwordManagerRepository: PasswordManagerRepository
+) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val listPasswords by lazyDeferred {
+        passwordManagerRepository.getPasswordList()
     }
-    val text: LiveData<String> = _text
+
+//    fun listPasswords():LiveData<List<PasswordEntity>>{
+//        viewModelScope.launch {
+//             passwordManagerRepository.getPasswordList()
+//
+//        }
+//    }
+
 }
