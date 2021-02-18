@@ -19,7 +19,11 @@
         android:id="@+id/navigation_tools"
         android:name="br.com.cassianojunior.passwordmanager.ui.tools.ToolsFragment"
         android:label="@string/title_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_tools" >
+        <action
+            android:id="@+id/action_navigation_tools_to_createPasswordFragment"
+            app:destination="@id/createPasswordFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
@@ -30,5 +34,9 @@
         android:id="@+id/createPasswordFragment"
         android:name="br.com.cassianojunior.passwordmanager.ui.create_password.CreatePasswordFragment"
         android:label="Create Password"
-        tools:layout="@layout/create_password_fragment" />
+        tools:layout="@layout/create_password_fragment" >
+        <argument
+            android:name="password"
+            app:argType="string" />
+    </fragment>
 </navigation>
