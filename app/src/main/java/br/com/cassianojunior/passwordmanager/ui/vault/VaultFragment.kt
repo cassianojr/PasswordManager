@@ -75,7 +75,10 @@ class VaultFragment : ScopedFragment() {
 
     private fun handleAddButtonClick() {
         binding.btnNewPassword.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_navigation_vault_to_createPasswordFragment)
+
+            val action = VaultFragmentDirections.actionNavigationVaultToCreatePasswordFragment("")
+
+            NavHostFragment.findNavController(this).navigate(action)
         }
     }
 

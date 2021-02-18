@@ -46,6 +46,7 @@
         android:layout_marginTop="8dp"
         >
         <TextView
+            android:id="@+id/txt_password_generated"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_placeholder_generated_password"
@@ -66,6 +67,18 @@
         android:layout_marginTop="16dp"
         android:textSize="16sp"
         />
+
+    <TextView
+        android:id="@+id/label_length_numb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@id/card_password"
+        app:layout_constraintLeft_toRightOf="@id/label_length_password"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_length"
@@ -94,6 +107,7 @@
                 android:padding="8dp"/>
 
             <SeekBar
+                android:id="@+id/seek_password_length"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:max="32"
@@ -154,6 +168,7 @@
             />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_numbers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -182,11 +197,13 @@
             />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_letters"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"
+            android:checked="true"
             />
 
     </androidx.cardview.widget.CardView>
@@ -210,6 +227,7 @@
             />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_symbols"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"

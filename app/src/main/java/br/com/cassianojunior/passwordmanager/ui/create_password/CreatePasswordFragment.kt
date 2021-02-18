@@ -7,14 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.navArgs
 import br.com.cassianojunior.passwordmanager.data.db.AppDatabase
 import br.com.cassianojunior.passwordmanager.data.repository.PasswordManagerRepositoryImpl
 import br.com.cassianojunior.passwordmanager.databinding.CreatePasswordFragmentBinding
 
 class CreatePasswordFragment : Fragment() {
-    private var _binding: CreatePasswordFragmentBinding? = null
 
+    private var _binding: CreatePasswordFragmentBinding? = null
     private val binding get() = _binding!!
+
+    private val args: CreatePasswordFragmentArgs by navArgs()
 
     companion object {
         fun newInstance() = CreatePasswordFragment()
@@ -31,10 +34,17 @@ class CreatePasswordFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = CreatePasswordFragmentBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.textPassword.setText(args.password)
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
