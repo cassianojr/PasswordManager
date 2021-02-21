@@ -1,4 +1,4 @@
-package br.com.cassianojunior.passwordmanager
+package br.com.cassianojunior.passwordmanager.ui
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import br.com.cassianojunior.passwordmanager.R
 
 class NavigationActivity : AppCompatActivity() {
 
